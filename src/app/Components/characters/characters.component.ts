@@ -52,12 +52,12 @@ export class CharactersComponent implements OnInit {
       });
     }else if(this.getScreenWidth<=800){
       const dialogRef = this.dialog.open(CharacterComponent, {
-        width: '95vw',
+        width: '150vw',
         data: {character},
       });
     } else if(this.getScreenWidth<=600){
     const dialogRef = this.dialog.open(CharacterComponent, {
-      width: '100vw',
+      width: '20rem',
       data: {character},
     });
     } else {

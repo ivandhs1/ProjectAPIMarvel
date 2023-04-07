@@ -7,13 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { CharactersComponent } from './Components/characters/characters.component';
 import { ComicsComponent } from './Components/comics/comics.component';
-import { CreatorsComponent } from './Components/creators/creators.component';
 import { SeriesComponent } from './Components/series/series.component';
 import { HomeComponent } from './Components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CharacterComponent } from './Components/subComponents/character/character.component';
 import { ComicComponent } from './Components/subComponents/comic/comic.component';
-import { CreatorComponent } from './Components/subComponents/creator/creator.component';
 import { SerieComponent } from './Components/subComponents/serie/serie.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -33,12 +31,10 @@ import { MatIconModule } from '@angular/material/icon'
     HeaderComponent,
     CharactersComponent,
     ComicsComponent,
-    CreatorsComponent,
     SeriesComponent,
     HomeComponent,
     CharacterComponent,
     ComicComponent,
-    CreatorComponent,
     SerieComponent
   ],
   imports: [
