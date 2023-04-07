@@ -26,3 +26,37 @@
     font-size: 2rem;
     
 }
+
+@media screen and (max-height:830px) {
+    .boxHome{
+        width: 100%;
+        height: 120vh;
+    }
+}
+
+
+
+@media screen and (max-width:1100px) {
+    .boxFatherInfo{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .boxFatherInfo{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .boxFatherInfo{
+        width: 90%;
+    }
+
+    .boxInfo{
+        width: 100%;
+        font-size: 1.5rem;
+        
+    }
+    
+}
