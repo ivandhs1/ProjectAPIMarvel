@@ -1,0 +1,16 @@
+
+<div class="boxSearchCharacter">
+    <input #input class="inputCharacter" type="text" name="" id="">
+    <button class="btnBuscar" (click)="buscar(input.value)">Buscar</button>
+</div>
+<div class="boxCards">
+    <div class="card" *ngFor="let character of allCharacters | async" style="background-image: url({{character.thumbnail.path}}.{{character.thumbnail.extension}}); background-size: cover;">
+        <h3 class="titleCard">{{character.name}}</h3>
+        <button class="btn btn-success btnCard" (click)="openDialog(character)">Ver mas</button>
+    </div>
+</div>
+
+<div class="boxMas" (click)="obtenerMas()">
+    <img src="../../../assets/images/down-arrow.png" alt="">
+</div>
+

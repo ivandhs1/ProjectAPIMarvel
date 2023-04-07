@@ -1,0 +1,23 @@
+<div class="box">
+    <div class="boxOne">
+        <h2>{{character.character.name}}</h2>
+        <img src="{{character.character.thumbnail.path}}.{{character.character.thumbnail.extension}}" alt="{{character.character.name}}">
+    </div>
+    <div class="boxTwo">
+        <div class="boxTwoOne">
+            <p class="opciones a" (click)="optionSearch(1)" [ngClass]="{'opA': optA === 'true', 'opAx' : optA === 'false' }">Comics</p>
+            <p class="opciones b" (click)="optionSearch(2)" [ngClass]="{'opB': optB === 'true', 'opBx' : optB === 'false' }">Series</p>
+            <p class="opciones c" (click)="optionSearch(3)" [ngClass]="{'opC': optC === 'true', 'opCx' : optC === 'false' }">Historias</p>
+        </div>
+        <div class="boxTwoTwo">
+            <div class="boxOpciones" *ngFor="let option of options">
+                <h3 class="nameOpcion">{{option.name}}</h3>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="boxBtn">
+    <button (click)="onNoClick()" class="btn btn-secondary btnCerrar">cerrar</button>
+</div>
+
