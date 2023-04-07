@@ -1,1 +1,14 @@
-<p>comics works!</p>
+<div class="boxSearch">
+    <input #input class="inputS" type="text" name="" id="">
+    <button class="btnBuscar" (click)="buscar(input.value)">Buscar</button>
+</div>
+<div class="boxCards">
+    <div class="card" *ngFor="let comic of allComics | async" style="background-image: url({{comic.thumbnail.path}}.{{comic.thumbnail.extension}}); background-size: cover;">
+        <h3 class="titleCard">{{comic.title}}</h3>
+        <button class="btn btn-success btnCard">Ver mas</button>
+    </div>
+</div>
+
+<div class="boxMas" (click)="obtenerMas()">
+    <img src="../../../assets/images/down-arrow.png" alt="">
+</div>
