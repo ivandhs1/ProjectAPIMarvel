@@ -16,12 +16,17 @@ export class CharactersComponent implements OnInit {
   cant:number=20;
   public getScreenWidth: any;
   public getScreenHeight: any;
+
+  public varr!: boolean;
   
 
   ngOnInit(): void {
     this.getCharacters(this.cant);
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
+  
+    this.varr=false;
+
   }
 
   getCharacters(vari:number){
@@ -40,7 +45,7 @@ export class CharactersComponent implements OnInit {
 
   openDialog(character:any): void {
 
-    if(this.getScreenWidth<=1600){
+/*     if(this.getScreenWidth<=1600){
       const dialogRef = this.dialog.open(CharacterComponent, {
         width: '60vw',
         data: {character},
@@ -70,8 +75,8 @@ export class CharactersComponent implements OnInit {
 
 
     
-    console.log("dsds");
-
+    console.log("dsds"); */
+    this.varr=!this.varr;
   }
 
   obtenerMas(){
