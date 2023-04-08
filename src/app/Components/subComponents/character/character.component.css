@@ -1,21 +1,40 @@
 .box{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 80%;
+    height: 100vh;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.699);
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2%;
+    justify-content: center;
+    overflow: auto;
+    z-index: 100;
 }
-.boxBtn{
-    height: 5vh;
+
+.boxFather{
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.87);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.boxMother{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
 
 .boxOne{
-    width: 40vw;
-    height: 50vh;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,64 +42,63 @@
 }
 
 .boxOne h2{
-    text-align: center;
+    
 }
 
 .boxOne img{
     width: 100%;
-    height: 45vh;
-    border-radius: 0.5rem;
+    height: 40vh;
 }
 
 .boxTwo{
-    width: 50vw;
-    height: 50vh;
-    background-color: whitesmoke;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxTwoOne{
     width: 100%;
-    height: 4.5vh;
+    height: 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-top-left-radius: 0.5rem ;
+    border-top-right-radius: 0.5rem ;
 }
 
 .opciones{
-    font-size: 1.5rem;
-    background-color: rgb(90, 125, 156);
-    width: 10rem;
-    height: 4vh;
-    text-align: center;
     margin: 0;
-    background:rgb(185, 185, 185);
-    cursor: pointer;
-}
-
-.a{
-    border-top-left-radius: 0.5rem;
-}
-
-.c{
-    border-top-right-radius: 0.5rem;
+    padding: 0;
+    width: 33.3%;
+    text-align: center;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid rgb(100, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxTwoTwo{
-    height: 45.5vh;
     width: 100%;
-    background-color: whitesmoke;
-    overflow-x: auto;
-    padding: 3px;
+    height: 40vh;
+    overflow: auto;
+    border: 1px solid rgb(100, 100, 100);
 }
 
 .boxOpciones{
     width: 100%;
     height: auto;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(224, 224, 224);
     margin-bottom: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid rgb(100, 100, 100);
 }
 
 .boxOpciones:hover{
@@ -92,12 +110,33 @@
     text-align: center;
 }
 
+.a{
+    border-top-left-radius: 0.4rem;
+}
+
+.b{
+    width: 33.4%;
+}
+
+.c{
+    border-top-right-radius: 0.4rem; 
+}
+
+.boxBtn{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    margin-top: 1rem;
+}
+
 .opA{
     background:rgb(185, 185, 185)!important;
 }
 
 .opAx{
-    background:rgb(228, 228, 228) !important;
+    background:rgb(224, 224, 224) !important;
 }
 
 .opB{
@@ -105,7 +144,7 @@
 }
 
 .opBx{
-    background:rgb(228, 228, 228) !important;
+    background:rgb(224, 224, 224)!important;
 }
 
 .opC{
@@ -113,45 +152,60 @@
 }
 
 .opCx{
-    background:rgb(228, 228, 228)!important;
+    background:rgb(224, 224, 224)!important;
 }
 
-.btnCerrar{
-    width: 6rem;
-}
-
-@media screen and (max-width:1100px) {
-    .boxTwo{
-        width: 30vw;
+@media screen and (max-width:1300px) {
+    .boxFather{
+        width: 80%;
     }
 }
 
-@media screen and (max-width:900px) {
-    .box{
+@media screen and (max-width:1080px) {
+    .boxMother{
         flex-direction: column;
+        width: 100%;
     }
-    .boxTwo{
-        width: 55vw;
+
+    .boxOne img{
+        height:30vh;
+    }
+
+    .boxTwoTwo{  
         height: 25vh;
     }
+
+    .boxFather{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .boxOne img{
+        width: 150%;
+    }
+    .boxTwoOne{
+        width: 150%;
+    }
     .boxTwoTwo{
-        height: 20vh;
+        width: 150%;
     }
 }
 
-
-@media screen and (max-width:640px) {
-    .boxOne{
-        height: 35vh;
+@media screen and (max-width:540px) {
+    .boxFather{
+        width: 95%;
     }
 }
 
-@media screen and (max-width:450px) {
-    .boxOne{
-        width: 50vw;
-        height: 35vh;
+@media screen and (max-width:380px) {
+    .boxOne img{
+        width: 180%;
     }
-    .cdk-overlay-pane{
-        width: 80vw !important;
+    .boxTwoOne{
+        width: 180%;
+    }
+    .boxTwoTwo{
+        width: 180%;
     }
 }

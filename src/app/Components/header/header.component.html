@@ -6,8 +6,8 @@
     <div class="boxMenu">
         <nav class="menuP">
             <ul class="menu" data-animation="center">
-                <li class="link" routerLink="/characters"><a >Personajes</a></li>
                 <li class="link" routerLink="/series"><a >Series</a></li>
+                <li class="link" routerLink="/characters"><a >Personajes</a></li>
                 <li class="link" routerLink="/comics"><a >Comics</a></li>
             </ul>
         </nav>
@@ -21,9 +21,9 @@
         </div>
         <div *ngIf="MENU==true" class="boxyMenum">
             <nav class="menuPm">
-                <ul class="menuM" data-animation="center">
-                    <li class="linkM" (click)="menu()" routerLink="/characters"><a >Personajes</a></li>
+                <ul class="menuM" data-animation="center">              
                     <li class="linkM" (click)="menu()" routerLink="/series"><a >Series</a></li>
+                    <li class="linkM" (click)="menu()" routerLink="/characters"><a >Personajes</a></li>
                     <li class="linkM" (click)="menu()" routerLink="/comics"><a >Comics</a></li>
                 </ul>
             </nav>
