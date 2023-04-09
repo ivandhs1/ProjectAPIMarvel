@@ -5,7 +5,6 @@
 <div class="boxCards">
     <div class="card" *ngFor="let comic of allComics | async" style="background-image: url({{comic.thumbnail.path}}.{{comic.thumbnail.extension}}); background-size: cover;">
         <h3 class="titleCard">{{comic.title}}</h3>
-        <button class="btn btn-success btnCard">Ver mas</button>
     </div>
 </div>
 

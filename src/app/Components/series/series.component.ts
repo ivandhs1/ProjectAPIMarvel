@@ -19,7 +19,7 @@ export class SeriesComponent implements OnInit {
 
   getAllSeries(vari:number){
     this.allSeries = this.serieService.getAllSeries(vari);
-    console.log(this.allSeries);
+    console.log(this.allSeries.forEach(char => console.log(char)));
   }
 
   buscar(title:string){
